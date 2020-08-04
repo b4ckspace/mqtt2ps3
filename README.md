@@ -1,6 +1,6 @@
-# mqtt2soundboard
+# mqtt2ps3
 
-Rewrites mqtt-messages from backspace home-automation to [soundboard](https://github.com/b4ckspace/soundboard)
+Rewrites mqtt-messages from backspace home-automation to ps3 with WebMAN
 
 ## Usage
 ### docker-compose
@@ -8,7 +8,7 @@ Rewrites mqtt-messages from backspace home-automation to [soundboard](https://gi
 version: '3'
 
 services:
-  mqtt2soundboard:
+  mqtt2ps3:
     build: ./
     restart: always
     environment:
@@ -16,4 +16,5 @@ services:
       - MQTT_USER=someone
       - MQTT_PASS=changeme
       - MQTT_PORT=1883
+      - PS3_HOST=ps3ip
 ```
